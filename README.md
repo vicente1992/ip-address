@@ -3,6 +3,10 @@
 
 ## Welcome! 👋
 
+## Clone repo
+```
+git clone https://github.com/vicente1992/ip-address.git
+```
 ## Project setup
 ```
 npm install

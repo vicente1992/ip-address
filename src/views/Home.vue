@@ -6,6 +6,7 @@
         type="text"
         v-model="textIp"
         placeholder="Search for any IP address or domain"
+        @keyup.enter="getInfo"
       />
       <button @click="getInfo" :disabled="isLoading">
         <i class="fas fa-chevron-right"></i>
@@ -23,7 +24,6 @@ import Spinner from "../components/spinner";
 import IpInfo from "../components/IpInfo";
 import { loadMap, getInfoIp } from "../services/map.services";
 import leaflet from "leaflet";
-
 export default {
   components: {
     Spinner,
@@ -59,7 +59,8 @@ export default {
 
     async getInfo() {
       try {
-        if (this.textIp.trim().length === 0) return;
+        if (this.textIp.trim().length === 0)
+          return this.$toast.default("Por favor  ingrse una ip válida");
         this.isLoading = true;
         const response = await getInfoIp(this.textIp);
         this.isLoading = false;
@@ -73,6 +74,7 @@ export default {
         this.setMarker(this.info);
       } catch (error) {
         console.log(error);
+        this.$toast.error("Error inesperado");
       }
     },
   },

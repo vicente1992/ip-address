@@ -14,7 +14,7 @@
     "vue": "^3.0.0",
     "vue-loading-overlay": "^4.0.4",
     "vue-router": "^4.0.0-0",
-    "vuejs-loading-screen": "^1.10.0"
+    "vue-toast-notification": "^2.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
