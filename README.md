@@ -1,4 +1,7 @@
 # ip-address-tracker
+![Design preview for the IP address tracker coding challenge](/src/assets/images/desktop-preview.jpg)
+
+## Welcome! 👋
 
 ## Project setup
 ```
